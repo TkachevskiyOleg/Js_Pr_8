@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #questionList {
+            margin-bottom: 20px;
+        }
+
+        .question {
+            margin-bottom: 10px;
+        }
+    </style>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div>
+        <h2>Add new question</h2>
+        <form onsubmit="addQuestion(event)">
+            <label for="question">Question:</label>
+            <input type="text" id="question" required>
+            <br>
+
+            <label for="correctAnswer">Correct Answer:</label>
+            <input type="text" id="correctAnswer" required>
+            <br>
+
+            <button type="submit">Add Question</button>
+        </form>
+        <br>
+
+        <div id="questionList">
+            <h3>Questions:</h3>
+        </div>
+    </div>
+
+</body>
+<a href="task1.html">Task 1</a>
+<a href="task2.html">Task 2</a>
+<a href="task3.html">Task 3</a>
+<a href="task4.html">Task 4</a>
+
+</html>

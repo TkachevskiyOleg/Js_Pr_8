@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .suggestionsTable {
+            border-collapse: collapse;
+            width: 200px;
+            max-height: 150px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        .suggestionsTable th,
+        .suggestionsTable td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .suggestionsTable th {
+            background-color: #f2f2f2;
+        }
+
+        #userTable {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        #userTable th,
+        #userTable td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        #userTable th {
+            background-color: #f2f2f2;
+        }
+
+        #countryInput {
+            width: 100px;
+            height: 2px;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        #suggestionsList {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 150px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            border: none;
+        }
+
+        #suggestionsLists {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 150px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            border: none;
+        }
+    </style>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <form onsubmit="saveUserInfo(event); return false;">
+        <label for="name">Firstname:</label><br>
+        <input type="text" id="name">
+        <br>
+
+        <label for="surname">Surname:</label><br>
+        <input type="text" id="surname">
+        <br>
+
+        <label for="birthday">Birthday:</label><br>
+        <input type="date" id="birthday">
+        <br>
+
+        <label for="">Gender:</label>
+        <input name="radioGroup1" type="radio" id="sex1" value="Male">
+        <label for="sex1">Male</label>
+        <input name="radioGroup1" type="radio" id="sex2" value="Female">
+        <label for="sex2">Female</label>
+        <br>
+        <label for="countryInput">Write country:</label>
+        <input type="text" id="countryInput" oninput="showSuggestions()" autocomplete="off">
+
+        <ul id="suggestionsList"></ul><br>
+
+        <label for="countryInput">Write city:</label>
+        <input type="text" id="cityInput" oninput="showSuggestionsCity()" autocomplete="off">
+
+        <ul id="suggestionsLists"></ul><br>
+
+        <label for="">Skills:</label>
+        <input type="checkbox" id="lang1">
+        <label for="lang">HTML</label>
+        <input type="checkbox" id="lang2">
+        <label for="lang2">CSS</label>
+        <input type="checkbox" id="lang3">
+        <label for="lang3">JS</label>
+        <input type="checkbox" id="lang4">
+        <label for="lang4">PHP</label>
+        <input type="checkbox" id="lang5">
+        <label for="lang5">C++</label><br>
+        <button type="submit">Save</button>
+    </form>
+
+
+    <div id="userInfo"></div>
+
+    <table id="userTable"></table>
+
+</body>
+<a href="task1.html">Task 1</a>
+<a href="task2.html">Task 2</a>
+<a href="task4.html">Task 4</a>
+<a href="task5.html">Task 5</a>
+
+</html>

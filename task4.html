@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .color-input {
+            width: 60px;
+            height: 30px;
+            margin-right: 10px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .add-button {
+            height: 30px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .color-palette {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 300px;
+        }
+
+        .color-box {
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            border: 1px solid #000;
+        }
+    </style>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <form onsubmit="addColor(); return false;">
+        <label for="redInput">R:</label>
+        <input type="number" id="redInput" min="0" max="255" value="0">
+
+        <label for="greenInput">G:</label>
+        <input type="number" id="greenInput" min="0" max="255" value="0">
+
+        <label for="blueInput">B:</label>
+        <input type="number" id="blueInput" min="0" max="255" value="0">
+
+        <button type="submit">Add Color</button>
+    </form>
+
+    <div class="color-palette" id="colorPalette">
+    </div>
+
+</body>
+<a href="task1.html">Task 1</a>
+<a href="task2.html">Task 2</a>
+<a href="task3.html">Task 3</a>
+<a href="task5.html">Task 5</a>
+
+</html>
